@@ -1,0 +1,5 @@
+rootProject.name = 'kafka-test-app'
+include 'kafka-listener'
+include 'kafka-producer'
+
+
