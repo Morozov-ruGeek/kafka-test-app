@@ -1,0 +1,17 @@
+server:
+  port: 8190
+
+spring:
+  application:
+    name: producer-kafka
+  kafka:
+    bootstrap-servers: ${KAFKA_SERVER:https://kafka:9092}
+    producer:
+      client-id: ${KAFKA_PRODUCER_ID:producerService}
+
+share:
+  topics:
+    orders:
+      name: ${FIRST_TOPIC_NAME:orders}
+    batch:
+      name: ${SECOND_TOPIC_NAME:batch}

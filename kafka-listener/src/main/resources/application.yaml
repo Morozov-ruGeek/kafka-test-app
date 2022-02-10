@@ -1,0 +1,17 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: consumer-kafka
+  kafka:
+    consumer:
+      group-id: ${GROUP_ID:server.broadcast}
+    bootstrap-servers: ${KAFKA_SERVER:https://kafka:9092}
+
+share:
+  topics:
+    orders:
+      name: ${FIRST_TOPIC_NAME:orders}
+    batch:
+      name: ${SECOND_TOPIC_NAME:batch}

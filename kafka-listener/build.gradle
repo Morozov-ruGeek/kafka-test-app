@@ -30,3 +30,9 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+def fileName = 'consumer-kafka'
+bootJar{
+    mainClass = 'com.epam.amorozov.kafka.listener.KafkaListenerApplication'
+    archiveName "${fileName}.jar"
+}

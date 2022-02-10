@@ -30,3 +30,9 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+def fileName = 'producer-kafka'
+bootJar{
+    mainClass = 'com.epam.amorozov.kafka.producer.KafkaProducerApplication'
+    archiveName "${fileName}.jar"
+}
